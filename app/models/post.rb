@@ -8,7 +8,12 @@ class Post < ActiveRecord::Base
   CLICKBAIT_PATTERNS = [
     "Won't Believe",
     "Secret",
-    "Top [0-9]*/i,
+    "Top 0",
+    "Top 1",
+    "Top 2",
+    "Top 3",
+    "Top 4",
+    "Top 5",
     "Guess"
   ]
 
