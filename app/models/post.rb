@@ -23,9 +23,15 @@ class Post < ActiveRecord::Base
 
   def is_clickbait?
     idx = 0
+    clickbait_exists = true
     while idx < CLICKBAIT_PATTERNS.size
       if !title.split.include?(CLICKBAIT_PATTERNS[idx])
-        
+        clickbait_exists = false
+        break
+      end
+    end
+    
+    if 
       errors.add(:title, "must be clickbait")
     end
   end
