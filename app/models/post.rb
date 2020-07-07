@@ -31,8 +31,9 @@ class Post < ActiveRecord::Base
       end
     end
     
-    if 
+    if clickbait_exists == false
       errors.add(:title, "must be clickbait")
     end
   end
+  
 end
