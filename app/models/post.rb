@@ -32,7 +32,6 @@ class Post < ActiveRecord::Base
         end
       else
           idx = idx + 1
-        end
       end
     end
     
