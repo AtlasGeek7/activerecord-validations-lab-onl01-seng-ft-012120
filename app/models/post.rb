@@ -6,7 +6,8 @@ class Post < ActiveRecord::Base
   validate :is_clickbait?
 
   CLICKBAIT_PATTERNS = [
-    "Won't Believe",
+    "Won't",
+    "Believe",
     "Secret",
     "Top 0",
     "Top 1",
