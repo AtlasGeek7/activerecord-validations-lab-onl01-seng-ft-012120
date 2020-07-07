@@ -29,7 +29,8 @@ class Post < ActiveRecord::Base
         if title.index(CLICKBAIT_PATTERNS[idx]) > -1
           clickbait_exists = true
           break
-        else
+        end
+      else
           idx = idx + 1
         end
       end
