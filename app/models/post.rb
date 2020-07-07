@@ -28,6 +28,8 @@ class Post < ActiveRecord::Base
       if !title.split.include?(CLICKBAIT_PATTERNS[idx])
         clickbait_exists = false
         break
+      else
+        idx = idx + 1
       end
     end
     
