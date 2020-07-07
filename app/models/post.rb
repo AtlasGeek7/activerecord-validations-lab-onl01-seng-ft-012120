@@ -22,7 +22,7 @@ class Post < ActiveRecord::Base
   ]
 
   def is_clickbait?
-    if !CLICKBAIT_PATTERNS.include?(title)
+    if !title.split.include?(CLICKBAIT_PATTERNS)
       errors.add(:title, "must be clickbait")
     end
   end
