@@ -24,9 +24,9 @@ class Post < ActiveRecord::Base
   def is_clickbait?
     idx = 0
     clickbait_exists = false
-    if title != nil
+    if title
       while idx < CLICKBAIT_PATTERNS.size
-          if title.index(CLICKBAIT_PATTERNS[idx]) > -1
+          if title.index(CLICKBAIT_PATTERNS[idx])
             clickbait_exists = true
             break
           else
