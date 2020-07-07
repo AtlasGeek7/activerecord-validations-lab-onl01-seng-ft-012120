@@ -14,6 +14,10 @@ class Post < ActiveRecord::Base
     "Top 3",
     "Top 4",
     "Top 5",
+    "Top 6",
+    "Top 7",
+    "Top 8",
+    "Top 9",
     "Guess"
   ]
 
