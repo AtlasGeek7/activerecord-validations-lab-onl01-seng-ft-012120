@@ -25,11 +25,13 @@ class Post < ActiveRecord::Base
     idx = 0
     clickbait_exists = false
     while idx < CLICKBAIT_PATTERNS.size
-      if title && title.index(CLICKBAIT_PATTERNS[idx]) > -1
-        clickbait_exists = true
-        break
-      else
-        idx = idx + 1
+      if title
+        if title.index(CLICKBAIT_PATTERNS[idx]) > -1
+          clickbait_exists = true
+          break
+        else
+          idx = idx + 1
+        end
       end
     end
     
